@@ -1,0 +1,60 @@
+{
+  "name": "@suin/node-packages",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node packages monorepo",
+  "license": "MIT",
+  "author": "suin <suinyeze@gmail.com>",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build --no-bail --stream",
+    "clean": "git clean -Xdf --exclude='!.idea/**/*'",
+    "clean:dry": "git clean -Xdfn --exclude='!.idea/**/*'",
+    "format": "lerna run format --no-bail",
+    "postinstall": "lerna bootstrap",
+    "lint": "lerna run lint --no-bail --stream",
+    "lint-staged": "lint-staged",
+    "precommit": "run-s lint-staged test",
+    "test": "lerna exec -- yarn run test"
+  },
+  "lint-staged": {
+    "**/package.json": [
+      "sort-package-json",
+      "git add"
+    ],
+    "*.{ts,tsx}": [
+      "yarn format --parallel",
+      "git add"
+    ]
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.settings.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "lerna": "^3.16.4",
+    "lint-staged": "^9.2.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "sort-package-json": "^1.22.1",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.19.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.5.3"
+  }
+}

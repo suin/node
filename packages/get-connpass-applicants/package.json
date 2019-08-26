@@ -1,0 +1,52 @@
+{
+  "name": "@suin/get-connpass-applicants",
+  "version": "1.0.0",
+  "description": "A simple function that gets the applicants from a given Connpass event URL.",
+  "keywords": [
+    "connpass"
+  ],
+  "homepage": "",
+  "license": "MIT",
+  "author": "suin <suinyeze@gmail.com>",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "main": "lib/src/index.js",
+  "directories": {
+    "lib": "lib/src",
+    "test": "lib/test"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "run-s lint:tsc lint:*:fix",
+    "lint": "run-s lint:*",
+    "lint:tsc": "tsc --noEmit --pretty",
+    "lint:tslint": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame",
+    "lint:tslint:fix": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame --fix",
+    "test": "jest"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/cheerio": "^0.22.13"
+  }
+}
