@@ -15,7 +15,13 @@
     "lint": "lerna run lint --no-bail --stream",
     "lint-staged": "lint-staged",
     "precommit": "run-s lint-staged test",
-    "test": "lerna exec -- yarn run test"
+    "release": "lerna publish from-package",
+    "release:canary": "lerna publish --canary",
+    "test": "lerna exec -- yarn run test",
+    "versionup": "lerna version --conventional-commits",
+    "versionup:major": "lerna version major --conventional-commits",
+    "versionup:minor": "lerna version minor --conventional-commits",
+    "versionup:patch": "lerna version patch --conventional-commits"
   },
   "lint-staged": {
     "**/package.json": [
