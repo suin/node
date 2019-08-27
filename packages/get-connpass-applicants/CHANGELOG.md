@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.4"></a>
+## [1.1.4](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.3...@suin/get-connpass-applicants@1.1.4) (2019-08-27)
+
+
+### Tests
+
+* **get-connpass-applicants:** add a test for Applicants.participantsByParticipationType with one pa ([8378be5](https://github.com/suin/node/commit/8378be5))
+
+
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.2...@suin/get-connpass-applicants@1.1.3) (2019-08-27)
 
