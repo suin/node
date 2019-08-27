@@ -1,5 +1,5 @@
 import axios, { AxiosInstance } from 'axios'
-import fs from 'fs'
+import * as fs from 'fs'
 import { Applicants, getConnpassApplicants } from '../src'
 
 jest.mock('axios')

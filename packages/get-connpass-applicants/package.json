@@ -16,11 +16,11 @@
     "lib",
     "src"
   ],
-  "main": "lib/src/index.js",
-  "types": "lib/src/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "directories": {
-    "lib": "lib/src",
-    "test": "lib/test"
+    "lib": "lib",
+    "test": "test"
   },
   "scripts": {
     "build": "tsc",
