@@ -3,10 +3,10 @@ import * as cheerio from 'cheerio'
 import { Applicant } from './Applicant'
 import { ApplicantRow } from './ApplicantRow'
 
-export class EventParticipantPage {
-  static async fetch(eventPageUrl: string): Promise<EventParticipantPage> {
+export class ParticipationPage {
+  static async fetch(eventPageUrl: string): Promise<ParticipationPage> {
     const response = await axios.get(eventPageUrl + '/participation')
-    return new EventParticipantPage(response.data)
+    return new ParticipationPage(response.data)
   }
 
   private readonly page: CheerioStatic
