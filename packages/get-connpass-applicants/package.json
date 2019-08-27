@@ -5,7 +5,11 @@
   "keywords": [
     "connpass"
   ],
-  "homepage": "",
+  "homepage": "https://github.com/suin/node/tree/master/packages/get-connpass-applicants",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suin/node.git"
+  },
   "license": "MIT",
   "author": "suin <suinyeze@gmail.com>",
   "files": [
