@@ -19,6 +19,7 @@
     "release:canary": "lerna publish --canary",
     "test": "lerna exec -- yarn run test",
     "versionup": "lerna version --conventional-commits --no-push",
+    "versionup:cancel": "git tag --points-at HEAD | xargs -I{} git tag --delete {} && git reset --hard HEAD^",
     "versionup:major": "lerna version major --conventional-commits --no-push",
     "versionup:minor": "lerna version minor --conventional-commits --no-push",
     "versionup:patch": "lerna version patch --conventional-commits --no-push"
