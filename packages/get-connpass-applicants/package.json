@@ -17,6 +17,7 @@
     "src"
   ],
   "main": "lib/src/index.js",
+  "types": "lib/src/index.d.ts",
   "directories": {
     "lib": "lib/src",
     "test": "lib/test"
