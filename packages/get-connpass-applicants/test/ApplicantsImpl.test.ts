@@ -22,5 +22,6 @@ describe('Applicants', () => {
       new Applicant('url', 'name3', '参加枠2'),
       new Applicant('url', 'name4', '参加枠2'),
     ])
+    expect(types.get('存在しない枠')).toBe(undefined)
   })
 })
