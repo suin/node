@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.1.3"></a>
+## [1.1.3](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.2...@suin/get-connpass-applicants@1.1.3) (2019-08-27)
+
+
+### Code Refactoring
+
+* **get-connpass-applicants:** change the class name from EventParticipantPage to ParticipationP ([285b252](https://github.com/suin/node/commit/285b252))
+
+
+
+
+
 <a name="1.1.2"></a>
 ## [1.1.2](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.1...@suin/get-connpass-applicants@1.1.2) (2019-08-27)
 
