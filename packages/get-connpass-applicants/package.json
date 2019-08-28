@@ -23,7 +23,7 @@
     "test": "test"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc -p tsconfig.build.json",
     "format": "run-s lint:tsc lint:*:fix",
     "lint": "run-s lint:*",
     "lint:tsc": "tsc --noEmit --pretty",
