@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.2.0...@suin/get-connpass-applicants@2.0.0) (2019-08-28)
+
+
+### Features
+
+* **get-connpass-applicants:** remove deprecated `Applicants.prototype.name` ([4d84873](https://github.com/suin/node/commit/4d84873))
+
+
+### BREAKING CHANGES
+
+* **get-connpass-applicants:** `Applicants.prototype.name` is no longer available. use `Applicants.prototype.displayName` instead
+
+
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.5...@suin/get-connpass-applicants@1.2.0) (2019-08-28)
 

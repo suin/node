@@ -1,6 +1,6 @@
 {
   "name": "@suin/get-connpass-applicants",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "A simple function that gets the applicants from a given Connpass event URL.",
   "keywords": [
     "connpass"
