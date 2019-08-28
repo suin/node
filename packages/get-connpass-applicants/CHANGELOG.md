@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.5...@suin/get-connpass-applicants@1.2.0) (2019-08-28)
+
+
+### Features
+
+* **get-connpass-applicants:** `nickName` and `displayName` is added to `Applicant`. ([6f6d037](https://github.com/suin/node/commit/6f6d037))
+
+
+
+
+
 <a name="1.1.5"></a>
 ## [1.1.5](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.1.4...@suin/get-connpass-applicants@1.1.5) (2019-08-27)
 
