@@ -26,16 +26,19 @@ describe('getConnpassApplicants', () => {
           url: 'https://connpass.com/user/alice.test/',
           displayName: 'Alice',
           participationType: '参加枠1',
+          status: 'accepted',
         },
         {
           url: 'https://connpass.com/user/bob.test/',
           displayName: 'Bob',
           participationType: '参加枠1',
+          status: 'accepted',
         },
         {
           url: 'https://connpass.com/user/carol.test/',
           displayName: 'Carol',
           participationType: '参加枠1',
+          status: 'accepted',
         },
       ])
     })
@@ -103,11 +106,13 @@ describe('getConnpassApplicants', () => {
           url: 'https://connpass.com/user/dave.test/',
           displayName: 'Dave',
           participationType: '参加枠1',
+          status: 'waiting',
         },
         {
           url: 'https://connpass.com/user/eva.test/',
           displayName: 'Eva',
           participationType: '参加枠1',
+          status: 'waiting',
         },
       ])
     })
@@ -129,11 +134,13 @@ describe('getConnpassApplicants', () => {
           url: 'https://connpass.com/user/dave.test/',
           displayName: 'Dave',
           participationType: '参加枠1',
+          status: 'cancelled',
         },
         {
           url: 'https://connpass.com/user/eva.test/',
           displayName: 'Eva',
           participationType: '参加枠1',
+          status: 'cancelled',
         },
       ])
     })
