@@ -1,10 +1,12 @@
 import { Applicant } from '../src'
+import { ApplicantStatus } from '../src/Applicant'
 
 describe('Applicant', () => {
   const applicant = new Applicant(
     'https://connpass.com/user/alice.test/',
     'Alice',
     '参加枠1',
+    ApplicantStatus.accepted,
   )
 
   it('should know the URL', () => {
