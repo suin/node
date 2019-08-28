@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@2.0.0...@suin/get-connpass-applicants@2.1.0) (2019-08-28)
+
+
+### Bug Fixes
+
+* **get-connpass-applicants:** fix missing of the 4th argument of `new Applicant()` in test code ([b589751](https://github.com/suin/node/commit/b589751))
+
+
+### Builds
+
+* **get-connpass-applicants:** separate tsconfig to lint/test one and build one ([5ee655d](https://github.com/suin/node/commit/5ee655d))
+
+
+### Features
+
+* **get-connpass-applicants:** add `status` field to `Applicant` ([46146ce](https://github.com/suin/node/commit/46146ce))
+
+
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@1.2.0...@suin/get-connpass-applicants@2.0.0) (2019-08-28)
 
