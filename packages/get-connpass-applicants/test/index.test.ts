@@ -24,17 +24,17 @@ describe('getConnpassApplicants', () => {
       expect(applicants.participants).toMatchObject([
         {
           url: 'https://connpass.com/user/alice.test/',
-          name: 'Alice',
+          displayName: 'Alice',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/bob.test/',
-          name: 'Bob',
+          displayName: 'Bob',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/carol.test/',
-          name: 'Carol',
+          displayName: 'Carol',
           participationType: '参加枠1',
         },
       ])
@@ -65,22 +65,22 @@ describe('getConnpassApplicants', () => {
       expect(applicants.participants).toMatchObject([
         {
           url: 'https://connpass.com/user/alice.test/',
-          name: 'Alice',
+          displayName: 'Alice',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/bob.test/',
-          name: 'Bob',
+          displayName: 'Bob',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/carol.test/',
-          name: 'Carol',
+          displayName: 'Carol',
           participationType: '参加枠2',
         },
         {
           url: 'https://connpass.com/user/dave.test/',
-          name: 'Dave',
+          displayName: 'Dave',
           participationType: '参加枠2',
         },
       ])
@@ -101,12 +101,12 @@ describe('getConnpassApplicants', () => {
       expect(applicants.waitlist).toMatchObject([
         {
           url: 'https://connpass.com/user/dave.test/',
-          name: 'Dave',
+          displayName: 'Dave',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/eva.test/',
-          name: 'Eva',
+          displayName: 'Eva',
           participationType: '参加枠1',
         },
       ])
@@ -127,12 +127,12 @@ describe('getConnpassApplicants', () => {
       expect(applicants.cancelled).toMatchObject([
         {
           url: 'https://connpass.com/user/dave.test/',
-          name: 'Dave',
+          displayName: 'Dave',
           participationType: '参加枠1',
         },
         {
           url: 'https://connpass.com/user/eva.test/',
-          name: 'Eva',
+          displayName: 'Eva',
           participationType: '参加枠1',
         },
       ])
