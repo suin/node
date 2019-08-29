@@ -1,6 +1,6 @@
 {
   "name": "@suin/get-connpass-applicants-cli",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple CLI command that gets the applicants from a given Connpass event URL.",
   "keywords": [
     "connpass"
