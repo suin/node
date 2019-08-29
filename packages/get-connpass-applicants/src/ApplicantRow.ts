@@ -1,5 +1,5 @@
 import cheerio from 'cheerio'
-import { Applicant } from './Applicant'
+import { ApplicantImpl } from './ApplicantImpl'
 import { ApplicantStatus } from './ApplicantStatus'
 
 export class ApplicantRow {
@@ -9,8 +9,13 @@ export class ApplicantRow {
     this.row = cheerio(applicantRowElement)
   }
 
-  toApplicant(status: ApplicantStatus): Applicant {
-    return new Applicant(this.url, this.name, this.participationType, status)
+  toApplicant(status: ApplicantStatus): ApplicantImpl {
+    return new ApplicantImpl(
+      this.url,
+      this.name,
+      this.participationType,
+      status,
+    )
   }
 
   private get name(): string {

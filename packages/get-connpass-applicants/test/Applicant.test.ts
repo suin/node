@@ -1,7 +1,8 @@
 import { Applicant, ApplicantStatus } from '../src'
+import { ApplicantImpl } from '../src/ApplicantImpl'
 
 describe('Applicant', () => {
-  const applicant = new Applicant(
+  const applicant: Applicant = new ApplicantImpl(
     'https://connpass.com/user/alice.test/',
     'Alice',
     '参加枠1',

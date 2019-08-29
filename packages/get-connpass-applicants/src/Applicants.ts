@@ -3,27 +3,31 @@ import { Applicant } from './Applicant'
 /**
  * Connpassの応募者
  */
-export interface Applicants {
+export interface Applicants extends Iterable<Applicant> {
+  /**
+   * 応募者総数
+   */
+  readonly length: number
+
   /**
    * 参加者
    */
-  readonly participants: ReadonlyArray<Applicant>
-
-  /**
-   * 参加枠ごとの参加者
-   */
-  readonly participantsByParticipationType: ReadonlyMap<
-    string,
-    ReadonlyArray<Applicant>
-  >
+  readonly accepted: Applicants
 
   /**
    * 補欠
    */
-  readonly waitlist: ReadonlyArray<Applicant>
+  readonly waiting: Applicants
 
   /**
    * キャンセル
    */
-  readonly cancelled: ReadonlyArray<Applicant>
+  readonly canceled: Applicants
+
+  /**
+   * 配列に変換する
+   */
+  readonly toArray: Applicant[]
+
+  get(index: number): Applicant | undefined
 }

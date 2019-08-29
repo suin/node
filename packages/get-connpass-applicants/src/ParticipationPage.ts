@@ -1,6 +1,6 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
-import { Applicant } from './Applicant'
+import { ApplicantImpl } from './ApplicantImpl'
 import { ApplicantRow } from './ApplicantRow'
 import { ApplicantStatus } from './ApplicantStatus'
 
@@ -16,7 +16,7 @@ export class ParticipationPage {
     this.page = cheerio.load(html)
   }
 
-  get participants(): ReadonlyArray<Applicant> {
+  get participants(): ReadonlyArray<ApplicantImpl> {
     return this.page('.participation_table_area tbody tr')
       .map((index, element) => {
         try {
@@ -32,7 +32,7 @@ export class ParticipationPage {
       .get()
   }
 
-  get waitlist(): ReadonlyArray<Applicant> {
+  get waitlist(): ReadonlyArray<ApplicantImpl> {
     return this.page('.waitlist_table_area tbody tr')
       .map((index, element) => {
         try {
@@ -48,13 +48,11 @@ export class ParticipationPage {
       .get()
   }
 
-  get cancelled(): ReadonlyArray<Applicant> {
+  get cancelled(): ReadonlyArray<ApplicantImpl> {
     return this.page('.cancelled_table_area tbody tr')
       .map((index, element) => {
         try {
-          return new ApplicantRow(element).toApplicant(
-            ApplicantStatus.cancelled,
-          )
+          return new ApplicantRow(element).toApplicant(ApplicantStatus.canceled)
         } catch (e) {
           throw new Error(
             `Failed to treat cancelled row element(idx:${index}) -- ${

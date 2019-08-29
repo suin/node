@@ -3,20 +3,29 @@ import { ApplicantStatus } from './ApplicantStatus'
 /**
  * 応募者
  */
-export class Applicant {
+export interface Applicant {
+  /**
+   * ConnpassプロフィールのURL
+   */
+  readonly url: string
+
+  /**
+   * Connpass個人設定のユーザー名
+   */
   readonly nickName: string
 
-  // noinspection JSUnusedGlobalSymbols
-  constructor(
-    readonly url: string,
-    readonly displayName: string,
-    readonly participationType: string,
-    readonly status: ApplicantStatus,
-  ) {
-    const matches = /^https:\/\/connpass\.com\/user\/([^\/]+)\/$/.exec(url)
-    if (matches === null) {
-      throw new Error(`Invalid URL is given: ${url}`)
-    }
-    this.nickName = matches[1]
-  }
+  /**
+   * Connpass個人設定の表示名
+   */
+  readonly displayName: string
+
+  /**
+   * 参加枠
+   */
+  readonly participationType: string
+
+  /**
+   * 応募ステータス
+   */
+  readonly status: ApplicantStatus
 }

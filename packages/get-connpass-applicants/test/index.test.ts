@@ -10,18 +10,18 @@ const mockHtmlDir = `${__dirname}/../test/`
 const file = (name: string) => fs.readFileSync(`${mockHtmlDir}/${name}`)
 
 describe('getConnpassApplicants', () => {
-  describe('An event that has three participants', () => {
+  describe('An event that has three accepted', () => {
     let applicants: Applicants
 
     beforeEach(async () => {
-      axiosMock.get.mockResolvedValue({ data: file('three-participants.html') })
+      axiosMock.get.mockResolvedValue({ data: file('three-accepted.html') })
       const url = 'https://example.connpass.com/event/123/'
       applicants = await getConnpassApplicants(url)
     })
 
-    test('should return participants', () => {
-      expect(applicants.participants.length).toBe(3)
-      expect(applicants.participants).toMatchObject([
+    test('should return accepted', () => {
+      expect(applicants.accepted.length).toBe(3)
+      expect(applicants.accepted.toArray).toMatchObject([
         {
           url: 'https://connpass.com/user/alice.test/',
           displayName: 'Alice',
@@ -43,12 +43,12 @@ describe('getConnpassApplicants', () => {
       ])
     })
 
-    test('should return zero waitlist', () => {
-      expect(applicants.waitlist.length).toBe(0)
+    test('should return zero waiting', () => {
+      expect(applicants.waiting.length).toBe(0)
     })
 
-    test('should return zero cancelled', () => {
-      expect(applicants.waitlist.length).toBe(0)
+    test('should return zero canceled', () => {
+      expect(applicants.waiting.length).toBe(0)
     })
   })
 
@@ -63,9 +63,9 @@ describe('getConnpassApplicants', () => {
       applicants = await getConnpassApplicants(url)
     })
 
-    test('should return participants', () => {
-      expect(applicants.participants.length).toBe(4)
-      expect(applicants.participants).toMatchObject([
+    test('should return accepted', () => {
+      expect(applicants.accepted.length).toBe(4)
+      expect(applicants.accepted.toArray).toMatchObject([
         {
           url: 'https://connpass.com/user/alice.test/',
           displayName: 'Alice',
@@ -90,18 +90,18 @@ describe('getConnpassApplicants', () => {
     })
   })
 
-  describe('An event that has two waitlist', () => {
+  describe('An event that has two waiting', () => {
     let applicants: Applicants
 
     beforeEach(async () => {
-      axiosMock.get.mockResolvedValue({ data: file('two-waitlist.html') })
+      axiosMock.get.mockResolvedValue({ data: file('two-waiting.html') })
       const url = 'https://example.connpass.com/event/123/'
       applicants = await getConnpassApplicants(url)
     })
 
-    test('should return waitlist', () => {
-      expect(applicants.waitlist.length).toBe(2)
-      expect(applicants.waitlist).toMatchObject([
+    test('should return waiting', () => {
+      expect(applicants.waiting.length).toBe(2)
+      expect(applicants.waiting.toArray).toMatchObject([
         {
           url: 'https://connpass.com/user/dave.test/',
           displayName: 'Dave',
@@ -118,29 +118,29 @@ describe('getConnpassApplicants', () => {
     })
   })
 
-  describe('An event that has two cancelled', () => {
+  describe('An event that has two canceled', () => {
     let applicants: Applicants
 
     beforeEach(async () => {
-      axiosMock.get.mockResolvedValue({ data: file('two-cancelled.html') })
+      axiosMock.get.mockResolvedValue({ data: file('two-canceled.html') })
       const url = 'https://example.connpass.com/event/123/'
       applicants = await getConnpassApplicants(url)
     })
 
-    test('should return cancelled', () => {
-      expect(applicants.cancelled.length).toBe(2)
-      expect(applicants.cancelled).toMatchObject([
+    test('should return canceled', () => {
+      expect(applicants.canceled.length).toBe(2)
+      expect(applicants.canceled.toArray).toMatchObject([
         {
           url: 'https://connpass.com/user/dave.test/',
           displayName: 'Dave',
           participationType: '参加枠1',
-          status: 'cancelled',
+          status: 'canceled',
         },
         {
           url: 'https://connpass.com/user/eva.test/',
           displayName: 'Eva',
           participationType: '参加枠1',
-          status: 'cancelled',
+          status: 'canceled',
         },
       ])
     })
