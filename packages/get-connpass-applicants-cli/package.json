@@ -1,0 +1,54 @@
+{
+  "name": "@suin/get-connpass-applicants-cli",
+  "version": "0.0.0",
+  "description": "A simple CLI command that gets the applicants from a given Connpass event URL.",
+  "keywords": [
+    "connpass"
+  ],
+  "homepage": "https://github.com/suin/node/tree/master/packages/get-connpass-applicants-cli",
+  "bugs": "https://github.com/suin/node/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suin/node.git"
+  },
+  "license": "MIT",
+  "author": "suin <suinyeze@gmail.com>",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "bin": {
+    "connpass-applicants": "./bin/run"
+  },
+  "scripts": {
+    "build": "tsc",
+    "format": "run-s lint:tsc lint:*:fix",
+    "lint": "run-s lint:*",
+    "lint:tsc": "tsc --noEmit --pretty",
+    "lint:tslint": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame",
+    "lint:tslint:fix": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame --fix",
+    "test": "echo no test"
+  },
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "@suin/get-connpass-applicants": "^3.0.0",
+    "fast-csv": "^3.4.0",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "ts-node": "^8.3.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "oclif": {
+    "bin": "connpass-applicants"
+  }
+}

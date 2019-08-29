@@ -19,7 +19,7 @@
     "precommit": "run-s lint-staged test",
     "release": "run-s test clean build release!",
     "release!": "lerna publish from-package",
-    "test": "lerna exec -- yarn run test",
+    "test": "lerna exec --no-bail --stream -- yarn run test",
     "versionup": "lerna version --conventional-commits --no-push --changelog-preset=angular-all",
     "versionup:cancel": "git tag --points-at HEAD | xargs -I{} git tag --delete {} && git reset --hard HEAD^",
     "versionup:major": "lerna version major --conventional-commits --no-push --changelog-preset=angular-all",
