@@ -1,5 +1,6 @@
 import { Command, flags } from '@oclif/command'
 import {
+  Applicant,
   Applicants,
   getConnpassApplicants,
 } from '@suin/get-connpass-applicants'
@@ -93,7 +94,7 @@ const jsonFormatter = (
 const csvFormatter = async (applicants: Applicants): Promise<string> =>
   await csv.writeToString([
     ['nickName', 'displayName', 'participationType', 'status', 'url'],
-    ...applicants.toArray.map(a => [
+    ...applicants.toArray.map((a: Applicant) => [
       a.nickName,
       a.displayName,
       a.participationType,
