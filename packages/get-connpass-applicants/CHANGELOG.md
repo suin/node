@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="3.0.0"></a>
+# [3.0.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@2.1.0...@suin/get-connpass-applicants@3.0.0) (2019-08-29)
+
+
+### Features
+
+* **get-connpass-applicants:** expose `ApplicantStatus` type ([a946acf](https://github.com/suin/node/commit/a946acf))
+* **get-connpass-applicants:** renew APIs to improve reusability ([3c288a1](https://github.com/suin/node/commit/3c288a1))
+
+
+### BREAKING CHANGES
+
+* **get-connpass-applicants:** a lot of APIs was changed. No longer compatible with older APIs.
+
+
+
+
+
 <a name="2.1.0"></a>
 # [2.1.0](https://github.com/suin/node/compare/@suin/get-connpass-applicants@2.0.0...@suin/get-connpass-applicants@2.1.0) (2019-08-28)
 
