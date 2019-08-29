@@ -18,8 +18,10 @@ jobs:
   include:
     - stage: lint
       node_js: '12'
+      before_script: yarn build
       script: yarn lint
     - stage: test
+      before_script: yarn build
       script: yarn test
     - stage: deploy
       node_js: '12'
