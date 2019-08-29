@@ -1,3 +1,5 @@
+import { ApplicantStatus } from './ApplicantStatus'
+
 /**
  * 応募者
  */
@@ -17,22 +19,4 @@ export class Applicant {
     }
     this.nickName = matches[1]
   }
-}
-
-/**
- * 応募者のステータス
- */
-export enum ApplicantStatus {
-  /**
-   * 参加
-   */
-  accepted = 'accepted',
-  /**
-   * 補欠
-   */
-  waiting = 'waiting',
-  /**
-   * キャンセル
-   */
-  cancelled = 'cancelled',
 }

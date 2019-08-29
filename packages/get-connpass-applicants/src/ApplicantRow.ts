@@ -1,5 +1,6 @@
 import cheerio from 'cheerio'
-import { Applicant, ApplicantStatus } from './Applicant'
+import { Applicant } from './Applicant'
+import { ApplicantStatus } from './ApplicantStatus'
 
 export class ApplicantRow {
   private readonly row: Cheerio

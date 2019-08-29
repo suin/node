@@ -1,5 +1,4 @@
-import { Applicant } from '../src'
-import { ApplicantStatus } from '../src/Applicant'
+import { Applicant, ApplicantStatus } from '../src'
 
 describe('Applicant', () => {
   const applicant = new Applicant(
@@ -23,5 +22,9 @@ describe('Applicant', () => {
 
   it('should know the nick name', () => {
     expect(applicant.nickName).toBe('alice.test')
+  })
+
+  it('should know the status', () => {
+    expect(applicant.status).toBe('accepted')
   })
 })

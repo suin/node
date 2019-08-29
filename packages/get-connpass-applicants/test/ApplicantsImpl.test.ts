@@ -1,5 +1,4 @@
-import { Applicant } from '../src'
-import { ApplicantStatus } from '../src/Applicant'
+import { Applicant, ApplicantStatus } from '../src'
 import { ApplicantsImpl } from '../src/ApplicantsImpl'
 
 describe('Applicants', () => {

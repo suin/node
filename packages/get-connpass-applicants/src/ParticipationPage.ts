@@ -1,7 +1,8 @@
 import axios from 'axios'
 import * as cheerio from 'cheerio'
-import { Applicant, ApplicantStatus } from './Applicant'
+import { Applicant } from './Applicant'
 import { ApplicantRow } from './ApplicantRow'
+import { ApplicantStatus } from './ApplicantStatus'
 
 export class ParticipationPage {
   static async fetch(eventPageUrl: string): Promise<ParticipationPage> {
