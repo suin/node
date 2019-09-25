@@ -13,15 +13,10 @@
   "license": "MIT",
   "author": "suin <suinyeze@gmail.com>",
   "files": [
-    "bin",
-    "lib"
+    "dist"
   ],
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "directories": {
-    "lib": "lib",
-    "test": "test"
-  },
   "scripts": {
     "build": "webpack",
     "format": "run-s lint:tsc lint:*:fix",

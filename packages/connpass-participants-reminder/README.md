@@ -1,15 +1,11 @@
-# `whotheyare`
+# `connpass-participants-reminder`
 
-Remind connpass participants using participation data.
+A Chrome extension to remind connpass participants using participation data.
 
-## Usage
+## How to build
+
+Run the following command to build the Chrome extension:
 
 ```
-whotheyare https://connpass.com/event/123/
-```
-
-## Installation
-
-```bash
-yarn global add @suin/whotheyare
+yarn build
 ```
