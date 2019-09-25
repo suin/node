@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <title>Chrome Extension Options</title>
+    <style>
+        body { padding: 10px; }
+    </style>
+</head>
+
+<body>
+
+<div>
+    <label for="apiKey">AirtableのAPIキー:</label>
+    <input id="apiKey" type="text" placeholder="key**********">
+    <div><a href="https://airtable.com/account">Airtableのアカウントページ</a>の「API Key」を参照。</div>
+</div>
+
+<div>
+    <label for="appId">appId:</label>
+    <input id="appId" type="text" placeholder="app**************">
+    <div>「app」で始まるbaseのID。<a href="https://airtable.com/api">AirtableのAPI</a>参照。</div>
+</div>
+
+<div>
+    <label for="tableName">テーブル名:</label>
+    <input id="tableName" type="text">
+</div>
+
+<div>
+    <label for="viewName">ビュー名:</label>
+    <input id="viewName" type="text">
+</div>
+
+<button id="save">保存</button>
+
+<div id="status"></div>
+
+<script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "name": "@suin/connpass-participants-reminder",
+  "version": "3.0.0",
+  "description": "Remind connpass participants using participation data.",
+  "keywords": [
+    "connpass"
+  ],
+  "homepage": "https://github.com/suin/node/tree/master/packages/whotheyare",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suin/node.git"
+  },
+  "license": "MIT",
+  "author": "suin <suinyeze@gmail.com>",
+  "files": [
+    "bin",
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "build": "webpack",
+    "format": "run-s lint:tsc lint:*:fix",
+    "lint": "run-s lint:*",
+    "lint:tsc": "tsc --noEmit --pretty",
+    "lint:tslint": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame",
+    "lint:tslint:fix": "tslint -p tsconfig.json -c ../../tslint.json -t codeFrame --fix",
+    "start": "webpack --watch",
+    "test": "echo No tests yet!"
+  },
+  "jest": {
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "dependencies": {
+    "airtable": "^0.7.1"
+  },
+  "devDependencies": {
+    "@types/airtable": "^0.5.6",
+    "@types/chrome": "^0.0.89",
+    "copy-webpack-plugin": "^5.0.4",
+    "ts-loader": "^6.1.2",
+    "ts-node": "^8.4.1",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
